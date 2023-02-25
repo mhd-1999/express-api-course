@@ -87,6 +87,7 @@ model BookmarkPost{
   user User @relation(fields: [userId],references: [id])
 
   @@id([postId,userId])
+  @@map("bookmark_post")
 }
 
 
