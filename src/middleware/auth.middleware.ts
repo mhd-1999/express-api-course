@@ -14,7 +14,7 @@ export const protect=(req,res,next)=>{
         res.json({message:'Not authorized!'})
         return 
     }
-    const [,token]=bearer.split('')
+    const [,token]=bearer.split(' ')
     if(!token){
         res.status(401)
         res.json({message:'not valid token'})
